@@ -16,6 +16,52 @@ The key goals are:
 5. For each elixir, check whether all required ingredients exist in the available set.
 6. Print sorted results and optional diagnostics.
 
+```mermaid
+flowchart TD
+    A[User Input] --> B[Command Parsing]
+    B --> C[Normalize Ingredients]
+    C --> D[WizardWorldClient Fetch Elixirs]
+    D --> E[Match Elixirs]
+    E --> F[Output Results]
+```
+
+```mermaid
+flowchart TD
+    A[Command Layer] --> B[Service Layer]
+    B --> C[Client Layer]
+    C --> D[API Config]
+    C --> E[DTO Mapping]
+    E --> F[Model Mapping]
+    B --> G[Util Normalization]
+    F --> H[Match Results]
+    H --> I[Text/JSON Output]
+    A --> J[Logging Config]
+    B --> J
+    C --> J
+    A --> K[Error Handling]
+    B --> K
+    C --> K
+    K --> I
+```
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant CLI as Command.Main
+    participant Service as ElixirFinderService
+    participant Client as WizardWorldClient
+    participant API as Wizard World API
+
+    User->>CLI: --ingredients "A, B, C"
+    CLI->>Service: findElixirs(ingredients)
+    Service->>Client: fetchElixirs()
+    Client->>API: GET /Elixirs
+    API-->>Client: 200 + JSON
+    Client-->>Service: List<Elixir>
+    Service-->>CLI: ElixirMatchResult
+    CLI-->>User: Text/JSON output
+```
+
 ## Proposed Modules
 
 ### 1) Command Layer (`src/main/.../command`)
