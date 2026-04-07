@@ -15,13 +15,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-class MainTest {
+class ApplicationTest {
     @Test
     void run_shows_help() {
         ElixirFinderService service = mock(ElixirFinderService.class);
         Output output = new Output();
 
-        int code = Main.run(new String[]{"--help"}, service, mockClient(), output.out, output.err);
+        int code = Application.run(new String[]{"--help"}, service, mockClient(), output.out, output.err);
 
         assertEquals(0, code);
         assertTrue(output.stdout().contains("Usage: nitro-wizard"));
@@ -32,7 +32,7 @@ class MainTest {
         ElixirFinderService service = mock(ElixirFinderService.class);
         Output output = new Output();
 
-        int code = Main.run(new String[]{"--ingredients"}, service, mockClient(), output.out, output.err);
+        int code = Application.run(new String[]{"--ingredients"}, service, mockClient(), output.out, output.err);
 
         assertEquals(2, code);
         assertTrue(output.stderr().contains("Missing value for --ingredients."));
@@ -43,7 +43,7 @@ class MainTest {
         ElixirFinderService service = mock(ElixirFinderService.class);
         Output output = new Output();
 
-        int code = Main.run(new String[]{"--bogus"}, service, mockClient(), output.out, output.err);
+        int code = Application.run(new String[]{"--bogus"}, service, mockClient(), output.out, output.err);
 
         assertEquals(2, code);
         assertTrue(output.stderr().contains("Unknown argument"));
@@ -55,10 +55,22 @@ class MainTest {
         ElixirFinderService service = mock(ElixirFinderService.class);
         Output output = new Output();
 
-        int code = Main.run(new String[]{"--ingredients", "   "}, service, mockClient(), output.out, output.err);
+        int code = Application.run(new String[]{"--ingredients", "   "}, service, mockClient(), output.out, output.err);
 
         assertEquals(2, code);
         assertTrue(output.stderr().contains("No ingredients provided."));
+    }
+
+    @Test
+    void run_rejects_invalid_characters() {
+        ElixirFinderService service = mock(ElixirFinderService.class);
+        Output output = new Output();
+
+        int code = Application.run(new String[]{"--ingredients", "Boomslang@Skin"}, service, mockClient(),
+                output.out, output.err);
+
+        assertEquals(2, code);
+        assertTrue(output.stderr().contains("invalid characters"));
     }
 
     @Test
@@ -70,7 +82,7 @@ class MainTest {
                         5));
         Output output = new Output();
 
-        int code = Main.run(new String[]{"--ingredients", "Leech Juice, Boomslang Skin"},
+        int code = Application.run(new String[]{"--ingredients", "Leech Juice, Boomslang Skin"},
                 service, mockClient(), output.out, output.err);
 
         assertEquals(0, code);
@@ -87,7 +99,7 @@ class MainTest {
                         10));
         Output output = new Output();
 
-        int code = Main.run(new String[]{"--ingredients", "Leech Juice", "--output", "json"},
+        int code = Application.run(new String[]{"--ingredients", "Leech Juice", "--output", "json"},
                 service, mockClient(), output.out, output.err);
 
         assertEquals(0, code);
@@ -103,7 +115,7 @@ class MainTest {
         when(client.fetchElixirs()).thenReturn(List.of(
                 new Elixir("1", "Polyjuice", "Transform", List.of("Leech Juice"))));
 
-        int code = Main.run(new String[]{"--sample"}, service, client, output.out, output.err);
+        int code = Application.run(new String[]{"--sample"}, service, client, output.out, output.err);
 
         assertEquals(0, code);
         assertTrue(output.stdout().contains("Sample elixir:"));
@@ -119,7 +131,7 @@ class MainTest {
                 new Elixir("1", "Polyjuice", "Transform", List.of("Leech Juice")),
                 new Elixir("2", "Felix Felicis", "Luck", List.of("Ashwinder Egg"))));
 
-        int code = Main.run(new String[]{"--list-elixirs"}, service, client, output.out, output.err);
+        int code = Application.run(new String[]{"--list-elixirs"}, service, client, output.out, output.err);
 
         assertEquals(0, code);
         assertTrue(output.stdout().contains("Elixirs:"));
@@ -135,7 +147,7 @@ class MainTest {
         when(client.fetchElixirs()).thenReturn(List.of(
                 new Elixir("1", "Polyjuice", "Transform", List.of("Leech Juice"))));
 
-        int code = Main.run(new String[]{"--list-elixirs=full"}, service, client, output.out, output.err);
+        int code = Application.run(new String[]{"--list-elixirs=full"}, service, client, output.out, output.err);
 
         assertEquals(0, code);
         assertTrue(output.stdout().contains("Effect: Transform"));
