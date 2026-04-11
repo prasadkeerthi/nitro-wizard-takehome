@@ -10,4 +10,10 @@ public class ElixirDto {
     public String name;
     public String effect;
     public List<IngredientDto> ingredients;
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public static class IngredientDto {
+        public String id;
+        public String name;
+    }
 }

@@ -1,0 +1,108 @@
+{
+  "uid": "nitro-wizard",
+  "title": "Nitro Wizard Service",
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "5s",
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "HTTP Requests (rate)",
+      "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "expr": "sum(rate(http_server_requests_seconds_count[1m]))",
+          "legendFormat": "requests/sec"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "HTTP Errors (4xx/5xx)",
+      "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "expr": "sum(rate(http_server_requests_seconds_count{status=~\"4..|5..\"}[1m]))",
+          "legendFormat": "errors/sec"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Request Latency p95 (s)",
+      "gridPos": { "x": 0, "y": 8, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, sum by (le) (rate(http_server_requests_seconds_bucket[5m])))",
+          "legendFormat": "p95"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "JVM Heap Used (bytes)",
+      "gridPos": { "x": 12, "y": 8, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "expr": "sum(jvm_memory_used_bytes{area=\"heap\"})",
+          "legendFormat": "heap used"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "CPU Usage (process)",
+      "gridPos": { "x": 0, "y": 16, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "expr": "rate(process_cpu_seconds_total[1m])",
+          "legendFormat": "cpu seconds/sec"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "JVM Threads",
+      "gridPos": { "x": 12, "y": 16, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "expr": "jvm_threads_live_threads",
+          "legendFormat": "live threads"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Match Requests (rate)",
+      "gridPos": { "x": 0, "y": 24, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "expr": "rate(nitro_wizard_elixir_match_requests_total[1m])",
+          "legendFormat": "match req/sec"
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "List/Sample/Ping Requests (rate)",
+      "gridPos": { "x": 12, "y": 24, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "expr": "rate(nitro_wizard_elixir_list_requests_total[1m])",
+          "legendFormat": "list req/sec"
+        },
+        {
+          "expr": "rate(nitro_wizard_elixir_sample_requests_total[1m])",
+          "legendFormat": "sample req/sec"
+        },
+        {
+          "expr": "rate(nitro_wizard_ping_requests_total[1m])",
+          "legendFormat": "ping req/sec"
+        }
+      ]
+    }
+  ],
+  "templating": { "list": [] },
+  "annotations": { "list": [] }
+}

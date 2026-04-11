@@ -2,7 +2,7 @@
 
 1. Setup & Structure
    - Create package structure under `src/main/java`:
-     - `.../command`, `.../service`, `.../model`, `.../client`, `.../config`, `.../util`, `.../dto`
+     - `.../controller`, `.../service`, `.../model`, `.../client`, `.../config`, `.../util`, `.../dto`
    - Verify `pom.xml` includes required dependencies (HTTP client, JSON parser, test libs).
    - After completing this section, run an end-to-end (E2E) smoke test for the current stage.
 

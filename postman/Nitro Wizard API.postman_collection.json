@@ -1,0 +1,78 @@
+{
+  "info": {
+    "name": "Nitro Wizard API",
+    "_postman_id": "1f6b2f32-3e2a-4c77-9b90-6c0b97db7f2b",
+    "description": "REST endpoints for the Nitro Wizard service.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Match Elixirs",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ingredients\": [\n    \"Boomslang Skin\",\n    \"Leech Juice\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/elixirs/match",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "elixirs", "match"]
+        }
+      }
+    },
+    {
+      "name": "Sample Elixir",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/elixirs/sample",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "elixirs", "sample"]
+        }
+      }
+    },
+    {
+      "name": "List Elixirs",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/elixirs",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "elixirs"]
+        }
+      }
+    },
+    {
+      "name": "List Elixirs (Full)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/elixirs?full=true",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "elixirs"],
+          "query": [
+            { "key": "full", "value": "true" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Health Ping",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/health/ping",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "health", "ping"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" }
+  ]
+}

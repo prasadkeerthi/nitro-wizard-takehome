@@ -10,7 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class IngredientNormalizerTest {
     @Test
     void normalize_applies_synonym_mapping() {
-        SynonymConfig config = new SynonymConfig(Map.of("leech juice", "leech-juice"));
+        SynonymConfig config = new SynonymConfig();
+        config.setMap(Map.of("leech juice", "leech-juice"));
         assertEquals("leech-juice", IngredientNormalizer.normalize("Leech   Juice", config));
     }
 

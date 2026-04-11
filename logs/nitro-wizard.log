@@ -1,0 +1,206 @@
+2026-04-11 15:34:52.217 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-11 15:34:52.234 [main] INFO  o.e.n.NitroWizardApplication - Starting NitroWizardApplication using Java 25.0.1 with PID 85891 (/home/gagana/IdeaProjects/nitro-wizard/target/classes started by gagana in /home/gagana/IdeaProjects/nitro-wizard)
+2026-04-11 15:34:52.235 [main] INFO  o.e.n.NitroWizardApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-11 15:34:53.042 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-11 15:34:53.050 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-11 15:34:53.052 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-11 15:34:53.052 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-11 15:34:53.085 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-11 15:34:53.086 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 805 ms
+2026-04-11 15:34:53.641 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-11 15:34:53.649 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-11 15:34:53.655 [main] INFO  o.e.n.NitroWizardApplication - Started NitroWizardApplication in 1.78 seconds (process running for 2.324)
+2026-04-11 15:34:57.666 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-11 15:34:57.666 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-11 15:34:57.667 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-04-11 15:34:58.194 [http-nio-8080-exec-1] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s) out of 145.
+2026-04-11 15:55:42.405 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-11 15:55:42.431 [main] INFO  o.e.n.NitroWizardApplication - Starting NitroWizardApplication using Java 25.0.1 with PID 88014 (/home/gagana/IdeaProjects/nitro-wizard/target/classes started by gagana in /home/gagana/IdeaProjects/nitro-wizard)
+2026-04-11 15:55:42.432 [main] INFO  o.e.n.NitroWizardApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-11 15:55:43.213 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-11 15:55:43.221 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-11 15:55:43.222 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-11 15:55:43.222 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-11 15:55:43.263 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-11 15:55:43.264 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 777 ms
+2026-04-11 15:55:43.878 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-11 15:55:43.886 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-11 15:55:43.893 [main] INFO  o.e.n.NitroWizardApplication - Started NitroWizardApplication in 1.819 seconds (process running for 2.343)
+2026-04-11 15:55:53.017 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-11 15:55:53.017 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-11 15:55:53.019 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-04-11 15:55:53.587 [http-nio-8080-exec-1] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 15:55:54.983 [http-nio-8080-exec-3] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 15:55:56.153 [http-nio-8080-exec-4] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 15:55:57.176 [http-nio-8080-exec-5] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 15:55:57.754 [http-nio-8080-exec-6] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 15:55:58.465 [http-nio-8080-exec-7] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:06:24.436 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-11 16:06:24.459 [main] INFO  o.e.n.NitroWizardApplication - Starting NitroWizardApplication using Java 25.0.1 with PID 90204 (/home/gagana/IdeaProjects/nitro-wizard/target/classes started by gagana in /home/gagana/IdeaProjects/nitro-wizard)
+2026-04-11 16:06:24.588 [main] INFO  o.e.n.NitroWizardApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-11 16:06:27.445 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-11 16:06:27.453 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-11 16:06:27.454 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-11 16:06:27.454 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-11 16:06:27.494 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-11 16:06:27.494 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2843 ms
+2026-04-11 16:06:29.042 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-11 16:06:29.171 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-11 16:06:29.178 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-11 16:06:29.191 [main] INFO  o.e.n.NitroWizardApplication - Started NitroWizardApplication in 5.591 seconds (process running for 6.522)
+2026-04-11 16:18:20.882 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-11 16:18:21.331 [main] INFO  o.e.n.NitroWizardApplication - Starting NitroWizardApplication using Java 21.0.10 with PID 92893 (/home/gagana/IdeaProjects/nitro-wizard/target/classes started by gagana in /home/gagana/IdeaProjects/nitro-wizard)
+2026-04-11 16:18:21.332 [main] INFO  o.e.n.NitroWizardApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-11 16:18:33.258 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-11 16:18:33.365 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-11 16:18:33.367 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-11 16:18:33.367 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-11 16:18:33.607 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-11 16:18:33.608 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 12046 ms
+2026-04-11 16:18:38.953 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-11 16:18:39.024 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-11 16:18:39.058 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-11 16:18:39.070 [main] INFO  o.e.n.NitroWizardApplication - Started NitroWizardApplication in 23.474 seconds (process running for 37.336)
+2026-04-11 16:20:31.831 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-11 16:20:31.831 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-11 16:20:31.832 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-11 16:20:38.543 [http-nio-8080-exec-2] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 2041 ms
+2026-04-11 16:25:53.169 [http-nio-8080-exec-7] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:25:53.169 [http-nio-8080-exec-10] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:25:53.170 [http-nio-8080-exec-6] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:25:53.170 [http-nio-8080-exec-1] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:25:53.170 [http-nio-8080-exec-9] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:25:53.171 [http-nio-8080-exec-8] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:31:25.470 [http-nio-8080-exec-3] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:31:26.374 [http-nio-8080-exec-4] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:31:27.297 [http-nio-8080-exec-8] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:31:27.940 [http-nio-8080-exec-10] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:32:19.891 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-11 16:32:19.961 [main] INFO  o.e.n.NitroWizardApplication - Starting NitroWizardApplication using Java 21.0.10 with PID 94846 (/home/gagana/IdeaProjects/nitro-wizard/target/classes started by gagana in /home/gagana/IdeaProjects/nitro-wizard)
+2026-04-11 16:32:19.962 [main] INFO  o.e.n.NitroWizardApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-11 16:32:22.291 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-11 16:32:22.299 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-11 16:32:22.301 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-11 16:32:22.301 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-11 16:32:22.351 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-11 16:32:22.352 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2355 ms
+2026-04-11 16:32:23.406 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-11 16:32:23.442 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-11 16:32:23.479 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-11 16:32:23.491 [main] INFO  o.e.n.NitroWizardApplication - Started NitroWizardApplication in 4.081 seconds (process running for 4.953)
+2026-04-11 16:32:24.458 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-11 16:32:24.458 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-11 16:32:24.460 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-11 16:32:27.850 [http-nio-8080-exec-3] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:32:29.280 [http-nio-8080-exec-4] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:44:28.720 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-11 16:44:32.369 [main] INFO  o.e.n.NitroWizardApplication - Starting NitroWizardApplication using Java 21.0.10 with PID 96415 (/home/gagana/IdeaProjects/nitro-wizard/target/classes started by gagana in /home/gagana/IdeaProjects/nitro-wizard)
+2026-04-11 16:44:32.370 [main] INFO  o.e.n.NitroWizardApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-11 16:45:33.958 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-11 16:45:33.966 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-11 16:45:33.968 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-11 16:45:33.969 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-11 16:45:35.473 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-11 16:45:35.474 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 61587 ms
+2026-04-11 16:45:51.625 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-11 16:45:51.791 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-11 16:45:52.259 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-11 16:45:52.272 [main] INFO  o.e.n.NitroWizardApplication - Started NitroWizardApplication in 95.706 seconds (process running for 116.003)
+2026-04-11 16:45:54.464 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-11 16:45:54.464 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-11 16:45:54.465 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-11 16:48:42.364 [http-nio-8080-exec-1] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:48:46.701 [http-nio-8080-exec-7] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:48:49.581 [http-nio-8080-exec-10] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:49:40.442 [http-nio-8080-exec-2] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:49:41.158 [http-nio-8080-exec-3] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:49:41.915 [http-nio-8080-exec-4] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:49:42.859 [http-nio-8080-exec-5] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:49:43.691 [http-nio-8080-exec-7] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:49:45.358 [http-nio-8080-exec-8] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:02.138 [http-nio-8080-exec-7] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:03.705 [http-nio-8080-exec-9] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:05.007 [http-nio-8080-exec-2] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:05.977 [http-nio-8080-exec-3] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:06.673 [http-nio-8080-exec-4] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:07.362 [http-nio-8080-exec-5] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:07.980 [http-nio-8080-exec-6] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:08.569 [http-nio-8080-exec-7] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:09.163 [http-nio-8080-exec-10] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:09.741 [http-nio-8080-exec-9] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:11.106 [http-nio-8080-exec-2] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:50:13.141 [http-nio-8080-exec-4] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 16:57:25.981 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-11 16:57:26.106 [main] INFO  o.e.n.NitroWizardApplication - Starting NitroWizardApplication using Java 21.0.10 with PID 98223 (/home/gagana/IdeaProjects/nitro-wizard/target/classes started by gagana in /home/gagana/IdeaProjects/nitro-wizard)
+2026-04-11 16:57:26.107 [main] INFO  o.e.n.NitroWizardApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-11 16:57:28.227 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-11 16:57:28.235 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-11 16:57:28.237 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-11 16:57:28.237 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-11 16:57:28.299 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-11 16:57:28.300 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2124 ms
+2026-04-11 16:57:29.572 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-11 16:57:29.604 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-11 16:57:29.633 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-11 16:57:29.645 [main] INFO  o.e.n.NitroWizardApplication - Started NitroWizardApplication in 4.205 seconds (process running for 12.039)
+2026-04-11 16:57:32.281 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-11 16:57:32.281 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-11 16:57:32.282 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-11 17:05:08.003 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-11 17:05:08.040 [main] INFO  o.e.n.NitroWizardApplication - Starting NitroWizardApplication using Java 21.0.10 with PID 99461 (/home/gagana/IdeaProjects/nitro-wizard/target/classes started by gagana in /home/gagana/IdeaProjects/nitro-wizard)
+2026-04-11 17:05:08.041 [main] INFO  o.e.n.NitroWizardApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-11 17:05:09.003 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-11 17:05:09.011 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-11 17:05:09.013 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-11 17:05:09.013 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-11 17:05:09.105 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-11 17:05:09.106 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1032 ms
+2026-04-11 17:05:09.826 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-11 17:05:09.862 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-11 17:05:09.873 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-11 17:05:09.885 [main] INFO  o.e.n.NitroWizardApplication - Started NitroWizardApplication in 2.152 seconds (process running for 2.526)
+2026-04-11 17:05:12.246 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-11 17:05:12.246 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-11 17:05:12.247 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-11 17:05:26.823 [http-nio-8080-exec-7] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 17:05:31.438 [http-nio-8080-exec-10] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 17:06:05.118 [http-nio-8080-exec-5] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 17:06:11.332 [http-nio-8080-exec-8] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 17:12:23.403 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-11 17:12:23.449 [main] INFO  o.e.n.NitroWizardApplication - Starting NitroWizardApplication using Java 21.0.10 with PID 99952 (/home/gagana/IdeaProjects/nitro-wizard/target/classes started by gagana in /home/gagana/IdeaProjects/nitro-wizard)
+2026-04-11 17:12:23.450 [main] INFO  o.e.n.NitroWizardApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-11 17:12:25.146 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-11 17:12:25.154 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-11 17:12:25.156 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-11 17:12:25.156 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-11 17:12:25.325 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-11 17:12:25.325 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1839 ms
+2026-04-11 17:12:26.347 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-11 17:12:26.384 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-11 17:12:26.395 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-11 17:12:26.407 [main] INFO  o.e.n.NitroWizardApplication - Started NitroWizardApplication in 3.402 seconds (process running for 4.663)
+2026-04-11 17:12:27.241 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-11 17:12:27.241 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-11 17:12:27.243 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-11 17:13:17.616 [http-nio-8080-exec-1] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 17:22:16.908 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-11 17:22:16.941 [main] INFO  o.e.n.NitroWizardApplication - Starting NitroWizardApplication using Java 21.0.10 with PID 101417 (/home/gagana/IdeaProjects/nitro-wizard/target/classes started by gagana in /home/gagana/IdeaProjects/nitro-wizard)
+2026-04-11 17:22:16.941 [main] INFO  o.e.n.NitroWizardApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-11 17:22:17.869 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-11 17:22:17.880 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-11 17:22:17.882 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-11 17:22:17.883 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-04-11 17:22:17.935 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-11 17:22:17.936 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 961 ms
+2026-04-11 17:22:18.823 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoints beneath base path '/actuator'
+2026-04-11 17:22:18.862 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-11 17:22:18.872 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-11 17:22:18.885 [main] INFO  o.e.n.NitroWizardApplication - Started NitroWizardApplication in 2.215 seconds (process running for 2.599)
+2026-04-11 17:22:22.323 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-11 17:22:22.323 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-11 17:22:22.324 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-11 17:22:38.291 [http-nio-8080-exec-8] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 17:22:39.299 [http-nio-8080-exec-10] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 17:22:40.869 [http-nio-8080-exec-1] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 17:22:41.755 [http-nio-8080-exec-2] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).
+2026-04-11 17:23:04.811 [http-nio-8080-exec-3] INFO  o.e.n.service.ElixirFinderService - Matched 1 elixir(s).

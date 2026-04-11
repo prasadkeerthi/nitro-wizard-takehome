@@ -1,12 +1,13 @@
 # Nitro Wizard
 
-Console app that tells you which Wizard World elixirs can be brewed from a set of available ingredients.
+Spring Boot service that tells you which Wizard World elixirs can be brewed from a set of available ingredients.
 
 ## Features
-- CLI input via `--ingredients` or interactive prompt.
-- Matches elixirs by required ingredients.
-- Text or JSON output.
-- Configurable API endpoints and timeouts via env vars.
+- REST API for matching and listing elixirs.
+- OpenAPI/Swagger UI for discovery.
+- JSON responses with validation and clear errors.
+- Configurable Wizard World API endpoints, timeouts, and synonyms via `application.yml`.
+- Prometheus metrics + Grafana dashboard demo.
 
 ## Requirements
 - Java 21
@@ -17,69 +18,110 @@ Console app that tells you which Wizard World elixirs can be brewed from a set o
 mvn -q test
 ```
 
-## Usage
+## Run the Server
 ```
-mvn -q exec:java -Dexec.args="--ingredients \"Boomslang Skin, Leech Juice\""
+mvn -q spring-boot:run
 ```
 
-## Package as JAR
-Build a runnable fat JAR:
+Build and run the JAR:
 ```
 mvn -q -DskipTests package
+java -jar target/nitro-wizard.jar
 ```
 
-Run as a CLI:
+OpenAPI docs:
+- `http://localhost:8080/api-docs`
+- `http://localhost:8080/swagger-ui.html`
+
+## Metrics + Grafana Demo
+Expose metrics at `http://localhost:8080/actuator/prometheus`.
+
+Run Prometheus + Grafana with Docker:
 ```
-java -jar target/nitro-wizard.jar --ingredients "Boomslang Skin, Leech Juice"
+sudo docker run -d --name prometheus -p 9090:9090 \\
+  --add-host=host.docker.internal:host-gateway \\
+  -v $(pwd)/infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro \\
+  prom/prometheus:v2.53.1
+
+sudo docker run -d --name grafana -p 3000:3000 \\
+  --add-host=host.docker.internal:host-gateway \\
+  -e GF_SECURITY_ADMIN_USER=admin \\
+  -e GF_SECURITY_ADMIN_PASSWORD=admin \\
+  -v $(pwd)/infra/grafana/provisioning:/etc/grafana/provisioning:ro \\
+  -v $(pwd)/infra/grafana/dashboards:/var/lib/grafana/dashboards:ro \\
+  grafana/grafana:11.1.0
 ```
 
-Or using the wrapper script:
+Open Grafana: `http://localhost:3000` (admin/admin).  
+Prometheus: `http://localhost:9090`.
+
+If Prometheus shows the target as DOWN, the config includes both
+`host.docker.internal:8080` and `172.17.0.1:8080` for Linux compatibility.
+
+Custom counters:
+- `nitro_wizard_elixir_match_requests_total`
+- `nitro_wizard_elixir_list_requests_total`
+- `nitro_wizard_elixir_sample_requests_total`
+- `nitro_wizard_ping_requests_total`
+
+Cleanup:
 ```
-./bin/nitro-wizard --ingredients "Boomslang Skin, Leech Juice"
+docker rm -f prometheus grafana
+```
+## Bruno Collection
+Import the collection from `bruno/` (use the `local` environment).
+
+## Postman Collection
+Import `postman/Nitro Wizard API.postman_collection.json`.
+
+## Screenshots
+Bruno collection:
+
+![Bruno Collection](docs/Screenshot%20from%202026-04-11%2016-54-02.png)
+
+Grafana dashboard:
+
+![Grafana Dashboard](docs/Screenshot%20from%202026-04-11%2017-24-44.png)
+
+## REST API Examples
+Match elixirs:
+```
+curl -s -X POST http://localhost:8080/api/elixirs/match \\
+  -H 'Content-Type: application/json' \\
+  -d '{"ingredients":["Boomslang Skin","Leech Juice"]}'
+```
+Note: `/api/elixirs/match` is POST-only.
+
+Sample elixir:
+```
+curl -s http://localhost:8080/api/elixirs/sample
 ```
 
-Verbose diagnostics:
+List elixirs:
 ```
-mvn -q exec:java -Dexec.args="--ingredients \"Boomslang Skin, Leech Juice\" --verbose"
-```
-
-JSON output:
-```
-mvn -q exec:java -Dexec.args="--ingredients \"Leech Juice\" --output json"
+curl -s http://localhost:8080/api/elixirs
 ```
 
-Sample elixir with ingredients:
+List elixirs (full details):
 ```
-mvn -q exec:java -Dexec.args="--sample"
-```
-
-List all elixir names:
-```
-mvn -q exec:java -Dexec.args="--list-elixirs"
-```
-
-List elixirs with effects and ingredients:
-```
-mvn -q exec:java -Dexec.args="--list-elixirs=full"
+curl -s "http://localhost:8080/api/elixirs?full=true"
 ```
 
 Health check:
 ```
-mvn -q exec:java -Dexec.args="--ping"
+curl -s http://localhost:8080/api/health/ping
 ```
 
 ## Configuration
-Runtime settings live in `src/main/resources/config.properties`.
+Runtime settings live in `src/main/resources/application.yml` under `wizard.api`.
 
-Example values:
+Synonym mapping (optional) can be configured under `wizard.synonyms.map`:
 ```
-wizard.api.baseUrl=https://wizard-world-api.herokuapp.com
-wizard.api.ingredientsPath=/Ingredients
-wizard.api.elixirsPath=/Elixirs
-wizard.api.connectTimeoutSeconds=5
-wizard.api.requestTimeoutSeconds=15
-wizard.api.maxRetries=2
-wizard.api.backoffMillis=250
+wizard:
+  synonyms:
+    map:
+      neemuoil: neem oil
+      lacewing flies: lacewing flies
 ```
 
 ## Testing
@@ -89,7 +131,7 @@ mvn -q test
 
 ## Notes
 - The Wizard World API may add fields over time. The client ignores unknown fields.
-- If no elixirs are found for the provided ingredients, the CLI prints a clear message and exits successfully.
+- If no elixirs are found for the provided ingredients, the API returns an empty list.
 
 ## AI Usage
 This project may include AI-assisted development. Be ready to discuss how tools were used if asked.
