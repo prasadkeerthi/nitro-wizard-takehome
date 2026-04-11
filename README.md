@@ -38,17 +38,17 @@ Expose metrics at `http://localhost:8080/actuator/prometheus`.
 
 Run Prometheus + Grafana with Docker:
 ```
-sudo docker run -d --name prometheus -p 9090:9090 \\
-  --add-host=host.docker.internal:host-gateway \\
-  -v $(pwd)/infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro \\
+sudo docker run -d --name prometheus -p 9090:9090 \
+  --add-host=host.docker.internal:host-gateway \
+  -v $(pwd)/infra/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro \
   prom/prometheus:v2.53.1
 
-sudo docker run -d --name grafana -p 3000:3000 \\
-  --add-host=host.docker.internal:host-gateway \\
-  -e GF_SECURITY_ADMIN_USER=admin \\
-  -e GF_SECURITY_ADMIN_PASSWORD=admin \\
-  -v $(pwd)/infra/grafana/provisioning:/etc/grafana/provisioning:ro \\
-  -v $(pwd)/infra/grafana/dashboards:/var/lib/grafana/dashboards:ro \\
+sudo docker run -d --name grafana -p 3000:3000 \
+  --add-host=host.docker.internal:host-gateway \
+  -e GF_SECURITY_ADMIN_USER=admin \
+  -e GF_SECURITY_ADMIN_PASSWORD=admin \
+  -v $(pwd)/infra/grafana/provisioning:/etc/grafana/provisioning:ro \
+  -v $(pwd)/infra/grafana/dashboards:/var/lib/grafana/dashboards:ro \
   grafana/grafana:11.1.0
 ```
 
